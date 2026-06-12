@@ -1,0 +1,5 @@
+.venv/
+site/public/
+site/resources/_gen/
+.hugo_build.lock
+.DS_Store

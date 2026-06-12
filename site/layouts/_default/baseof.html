@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.subtitle }}{{ end }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  {{ $css := resources.Get "css/main.css" | minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-id">
+      <a class="site-title" href="/">{{ site.Title }}</a>
+      <a class="site-subtitle" href="/">{{ site.Params.subtitle }}</a>
+    </div>
+    <nav class="site-nav">
+      {{ range site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      <a href="{{ site.Params.linkedin }}" aria-label="LinkedIn" class="icon-link">
+        {{ partial "linkedin-icon.html" . }}
+      </a>
+    </nav>
+  </header>
+  <main class="site-main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <a href="{{ site.Params.linkedin }}" aria-label="LinkedIn" class="icon-link">
+      {{ partial "linkedin-icon.html" . }}
+    </a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+baseURL = "https://www.jasonyu-explorations.com/"
+languageCode = "en-US"
+title = "Jason Yu"
+
+# Homepage excerpt length (words)
+summaryLength = 70
+
+# Keep the original Squarespace URL structure: /blog/<slug>
+[permalinks]
+  blog = "/blog/:slug/"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  subtitle = "Explorations and Insights"
+  linkedin = "https://www.linkedin.com/in/jasoncyu/"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menus]
+  [[menus.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 10
+  [[menus.main]]
+    name = "Let's Connect"
+    url = "/lets-connect/"
+    weight = 20

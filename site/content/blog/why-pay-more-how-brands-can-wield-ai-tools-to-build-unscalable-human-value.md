@@ -1,0 +1,35 @@
+---
+title: "Why Pay More? How Brands Can Wield AI Tools to Build Unscalable Human Value"
+date: 2025-04-29T01:19:29-0700
+slug: "why-pay-more-how-brands-can-wield-ai-tools-to-build-unscalable-human-value"
+---
+
+Consumers love a great product, but they love a great deal even more. As “Prof G” Scott Galloway might say, “80% of the value for 50% of the price is the peanut butter and chocolate of winning business strategies.” This is the strategy that got us from Gap to Old Navy, Zara to Shein, and arguably from Amazon to Temu. 
+
+We are now in an era where extreme efficiency, enabled by technology and data, is pushing the boundaries of what's possible in delivering value at a lower price, creating a new retail reality. The most prominent architects of this new landscape are giants like Shein and Temu. They've built a model that tightly integrates manufacturing with rapid data-driven iteration, allowing for optimized logistics and unprecedented speed and cost reduction. They can design a product, test its market appeal, and scale production with incredible agility, fundamentally changing consumer expectations about pricing, speed, and the perceived quality of goods sourced from places like China. 
+
+This hyper-efficient model is especially subject to external shocks such as the removal of the de minimis tax exemption as well as the extraordinary new tariff level of goods imported to the United States from China. As a result you may have seen on your social media feeds viral videos featuring individuals claiming factory connections, offering premium or luxury goods at steep discounts. These videos often leverage the narrative that they represent factories that supply to global brands that have cancelled orders leaving the manufacturers in China with significant surplus inventory.
+
+![](/images/why-pay-more-how-brands-can-wield-ai-tools-to-build-unscalable-human-value/img1.png)
+
+_Source_ : CNN, [https://www.cnn.com/2025/04/21/world/video/trump-tariffs-china-warehouses-tiktok-digvid](https://www.cnn.com/2025/04/21/world/video/trump-tariffs-china-warehouses-tiktok-digvid#:~:text=Chinese%20suppliers%20have%20been%20targeting,against%20misinformation%20and%20counterfeit%20goods)
+
+The fact that consumers are engaging with this content and even purchasing from previously unknown apps and platforms such as [DHGate ](https://www.dhgate.com/)represents an evolution of consumer beliefs and behaviors. Platforms like Shein, Temu, and TikTok Shop have paved the way for consumers to purchase cheap products directly from Chinese factories. The average consumer is still unlikely to believe a Chinese factory is a supplier for a luxury brand like Hermes. However, they may believe the yoga pants sold by the same Chinese factory who claims to be “a supplier for Lululemon” may be perfectly acceptable for a casual gym workout on a budget. 
+
+This leads to an almost existential question for consumer brands and retailers. Why would a consumer pay 3-5x the price for their product over the cheaper “good enough” product served up by an algorithm? 
+
+The answer lies in creating an **unscalable advantage through human interactions**. While algorithms and automations excel at optimizing predictable tasks, even the most advanced AI models (currently) struggle to replicate human interactions, empathy, community, or multi-sensory experiences. 
+
+Brands and retailers have already been experimenting with different ways to create this value:
+
+  * **Elevated & Personalized Service:** On a recent trip back to New York City, I noticed a new coffee chain Blank Street Coffee had sprouted up. As a bit of a coffee nerd, I was less interested in trying a “brown sugar cold brew” than the fact they were using Eversys super-automated espresso machines and hiring baristas with diverse backgrounds (think former SoulCycle instructors). Apparently the time saved by using automatic espresso machines allows baristas to build a relationship with their customers, to the point where patrons are shouting out their favorite baristas on Google reviews. 
+
+  * **Community Building:** While it seems most of the physical Run Clubs have closed and transitioned to a primarily online experience, Nike Run Clubs were an interesting experiment to bring people to a brand through group sport and fitness. The retailer REI is also well known for their outdoor activity workshops, repair / rental / resale programs, and even adventure travel packages. These initiatives build community and foster a sense of belonging around the brand, creating loyalty that goes beyond product features. 
+
+  * **Immersive Sensory Experiences:** The sense of smell is directly connected to parts of the brain associated with emotions and memory, which explains why smells can trigger strong emotional reactions. Caramel popcorn is often sold at fairs, festivals, and sporting events, so the sweet scent of warm caramel is often associated with carefree days and time with family. At Disney, this scent permeates the entirety of Mickey Avenue, and while we did sell caramel popcorn, the majority of the smell comes from diffusers strategically placed where guests congregate. The aroma not only reminds guests to be on the lookout for their favorite sweet treat, but also enhances their sense of enjoyment throughout the day. 
+
+The future of retail is bifurcating to ultra-efficient supply chains sourcing algorithmically powered consumer demand on the one hand and bespoke, interactive, multi-sensory experiences on the other. But this doesn’t mean that brands with aspirations for deeper human connections should give up on their projects aiming for efficiency. Instead, they **need to double down on the adoption of new technologies** **such as LLMs and AI to accelerate the shift of resources away from repetitive and time consuming tasks to developing new unscalable human capabilities**. 
+
+At TikTok Shop we have pivoted away from having skilled user researchers spending hours manually consolidating and reporting on user feedback. Instead, we now leverage machine learning and LLM based tools to process a massively increased number of data points collected throughout the customer journey, automate the reporting process, and feed the top priorities into cross-functional OKR planning. This has allowed us to shift resources to tackle complex platform experience challenges, for example, developing solutions to thread the needle between rules designed to manage platform safety that often appear to be at odds with seller growth. 
+
+Investing in human value shouldn’t be treated as simply a marketing expense. It requires a long-term vision and consistent strategy of leveraging automation to create efficiency that can free up resources to develop and test unscalable value propositions. In other words, brands and retailers need to wield the AI arms that are being raised outside of their castle walls. Otherwise, the next time a consumer sees an algorithmically served ad for a “good enough” substitute at an incredibly low price, the question will be, “Why would I pay more?”
