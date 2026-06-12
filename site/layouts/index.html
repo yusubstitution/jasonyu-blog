@@ -1,6 +1,30 @@
 {{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "blog" }}
+{{ $latest := index $posts 0 }}
+{{ $rest := after 1 $posts }}
+
+{{/* Featured hero: latest post, large */}}
+{{ with $latest }}
+{{ $img := "" }}
+{{ range (findRE `<img [^>]*src="([^"]+)"` .Content 1) }}
+  {{ $img = replaceRE `<img [^>]*src="([^"]+)".*` "$1" . }}
+{{ end }}
+<a class="featured" href="{{ .RelPermalink }}">
+  {{ with $img }}
+  <div class="featured-image"><img src="{{ . }}" alt="{{ $.Title }}"></div>
+  {{ end }}
+  <div class="featured-text">
+    <div class="item-meta">Latest <span class="meta-delimiter">•</span> {{ .Date.Format "January 2, 2006" }}</div>
+    <h1 class="featured-title">{{ .Title }}</h1>
+    <p class="featured-excerpt">{{ .Summary | plainify | truncate 280 }}</p>
+    <span class="read-more">Read More →</span>
+  </div>
+</a>
+{{ end }}
+
+{{/* Grid of earlier posts */}}
 <div class="post-grid">
-  {{ range where site.RegularPages "Section" "blog" }}
+  {{ range $rest }}
   {{ $img := "" }}
   {{ range (findRE `<img [^>]*src="([^"]+)"` .Content 1) }}
     {{ $img = replaceRE `<img [^>]*src="([^"]+)".*` "$1" . }}

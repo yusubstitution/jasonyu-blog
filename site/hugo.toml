@@ -24,7 +24,21 @@ summaryLength = 70
     name = "About Me"
     url = "/about/"
     weight = 10
-  [[menus.main]]
-    name = "Let's Connect"
-    url = "/lets-connect/"
-    weight = 20
+
+# Footer quotes — rotate randomly on each page load, fade between them.
+# All pulled from Jason's own writing. Edit freely.
+[[params.quotes]]
+  text = "The best e-commerce platforms don't just transact; they create experiences."
+  source = "About Me"
+[[params.quotes]]
+  text = "Build a blank canvas for identity, add strategic friction, and maintain discipline to protect the experience."
+  source = "The “Ugly Cute” Moat"
+[[params.quotes]]
+  text = "Even in the age of AI, or maybe especially in the age of AI, human interactions are invaluable."
+  source = "Why Pay More?"
+[[params.quotes]]
+  text = "摸着石头过河 — cross the river by feeling the stones."
+  source = "Involution or Evolution?"
+[[params.quotes]]
+  text = "The most difficult part of using AI tools is conquering the very human desire to avoid uncomfortable situations."
+  source = "Conquer Yourself"

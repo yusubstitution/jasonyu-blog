@@ -9,13 +9,12 @@ site/
 ├── hugo.toml              # Site config (title, menus, permalinks)
 ├── content/
 │   ├── blog/*.md          # Blog posts (one markdown file each)
-│   ├── about.md           # About Me page
-│   └── lets-connect.md    # Let's Connect page
+│   └── about.md           # About Me page
 ├── layouts/               # The "theme" — 5 small HTML templates
 │   ├── _default/baseof.html   # Page shell (header/nav/footer)
 │   ├── _default/single.html   # Single post/page
 │   ├── _default/list.html     # Tag pages
-│   ├── index.html             # Homepage (alternating blog list)
+│   ├── index.html             # Homepage (featured post + card grid)
 │   └── partials/linkedin-icon.html
 ├── assets/css/main.css    # All styling in one file (~200 lines)
 └── static/images/         # Post images (organized per post slug)
@@ -48,6 +47,8 @@ Put images in `site/static/images/my-post-slug/`. The first image in the post is
 **Publish:** commit and push to `main` — GitHub Actions builds and deploys automatically (see `.github/workflows/deploy.yml`).
 
 **Change styling:** everything is in `site/assets/css/main.css`. Design tokens (colors, fonts) are CSS variables at the top.
+
+**Edit footer quotes:** the rotating quotes live in `site/hugo.toml` under `[[params.quotes]]` — add/remove entries freely.
 
 ## One-time deployment setup
 

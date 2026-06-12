@@ -29,9 +29,29 @@
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="site-footer">
-    <a href="{{ site.Params.linkedin }}" aria-label="LinkedIn" class="icon-link">
-      {{ partial "linkedin-icon.html" . }}
-    </a>
+    {{ with site.Params.quotes }}
+    <blockquote class="footer-quote" id="footer-quote">
+      <p id="quote-text"></p>
+      <cite id="quote-source"></cite>
+    </blockquote>
+    <script>
+      const quotes = {{ . | jsonify | safeJS }};
+      let i = Math.floor(Math.random() * quotes.length);
+      const textEl = document.getElementById('quote-text');
+      const sourceEl = document.getElementById('quote-source');
+      const quoteEl = document.getElementById('footer-quote');
+      function show() {
+        textEl.textContent = '“' + quotes[i].text + '”';
+        sourceEl.textContent = '— ' + quotes[i].source;
+        quoteEl.classList.add('visible');
+      }
+      show();
+      setInterval(() => {
+        quoteEl.classList.remove('visible');
+        setTimeout(() => { i = (i + 1) % quotes.length; show(); }, 600);
+      }, 8000);
+    </script>
+    {{ end }}
   </footer>
 </body>
 </html>

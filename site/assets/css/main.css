@@ -81,6 +81,34 @@ a { color: var(--text); }
   padding: 2rem;
 }
 
+/* Homepage: featured latest post */
+.featured {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--accent);
+  text-decoration: none;
+}
+
+.featured-image { flex: 0 0 52%; }
+
+.featured-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-text { flex: 1; }
+
+.featured-title { margin: 0 0 1rem; font-size: 2.2rem; }
+
+.featured-excerpt { margin: 0 0 1.5rem; color: var(--muted); }
+
+.featured:hover .featured-title { opacity: 0.6; }
+
 /* Homepage: card grid of post previews */
 .post-grid {
   display: grid;
@@ -211,20 +239,47 @@ a { color: var(--text); }
 
 .post-nav a:hover { opacity: 0.6; }
 
-/* Footer */
+/* Footer: rotating quotes from Jason's writing */
 .site-footer {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 4rem;
   border-top: 1px solid var(--accent);
   display: flex;
   justify-content: center;
 }
 
+.footer-quote {
+  margin: 0;
+  max-width: var(--text-width);
+  min-height: 5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.footer-quote.visible { opacity: 1; }
+
+.footer-quote p {
+  margin: 0 0 0.75rem;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.footer-quote cite {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 /* Mobile */
 @media (max-width: 720px) {
   .site-header { flex-direction: column; align-items: flex-start; }
-  .blog-list-item, .blog-list-item:nth-child(even) { flex-direction: column; gap: 1.5rem; }
-  .item-image { flex: none; width: 100%; }
+  .featured { flex-direction: column; gap: 1.5rem; }
+  .featured-image { flex: none; width: 100%; }
+  .featured-title { font-size: 1.6rem; }
   .post-title { font-size: 1.8rem; }
 }

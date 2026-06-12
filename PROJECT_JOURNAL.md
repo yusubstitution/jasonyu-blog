@@ -33,3 +33,11 @@ Migrate www.jasonyu-explorations.com off Squarespace to a free, self-maintained 
 5. Decide on "Let's Connect" contact form: original Squarespace form doesn't carry over.
    Options: Formspree free tier, or just link LinkedIn/email.
 6. After cutover: cancel Squarespace subscription (keep until DNS verified!).
+
+### 2026-06-12 — Template iteration (Jason feedback)
+- Homepage: featured hero (latest post, large) + card grid of earlier posts.
+  Decided AGAINST homepage = full latest post (duplicate content, no overview).
+- Removed Let's Connect page and nav entry (contact form question now moot).
+- Footer: rotating quotes pulled from Jason's own posts (config: [[params.quotes]]
+  in hugo.toml, random start, 8s fade rotation). Replaced redundant LinkedIn icon.
+- Added prev/next article navigation on posts (earlier today).
