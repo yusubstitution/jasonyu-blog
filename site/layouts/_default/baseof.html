@@ -12,10 +12,10 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="site-id">
-      <a class="site-title" href="/">{{ site.Title }}</a>
-      <a class="site-subtitle" href="/">{{ site.Params.subtitle }}</a>
-    </div>
+    <a class="site-id" href="/">
+      <span class="site-title">{{ site.Title }}</span>
+      <span class="site-subtitle">{{ site.Params.subtitle }}</span>
+    </a>
     <nav class="site-nav">
       {{ range site.Menus.main }}
       <a href="{{ .URL }}">{{ .Name }}</a>
