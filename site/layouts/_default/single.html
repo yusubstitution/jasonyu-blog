@@ -15,4 +15,24 @@
   </div>
   {{ end }}
 </article>
+{{ if eq .Section "blog" }}
+{{ $prev := .PrevInSection }}{{/* PrevInSection = older post */}}
+{{ $next := .NextInSection }}{{/* NextInSection = newer post */}}
+{{ if or $prev $next }}
+<nav class="post-nav">
+  <div class="post-nav-prev">
+    {{ with $prev }}
+    <span class="post-nav-label">← Previous</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </div>
+  <div class="post-nav-next">
+    {{ with $next }}
+    <span class="post-nav-label">Next →</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </div>
+</nav>
+{{ end }}
+{{ end }}
 {{ end }}

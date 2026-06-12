@@ -81,29 +81,50 @@ a { color: var(--text); }
   padding: 2rem;
 }
 
-/* Blog list: alternating side-by-side, like the original */
-.blog-list-item {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--accent);
+/* Homepage: card grid of post previews */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2.5rem;
+  padding: 1rem 0 3rem;
 }
 
-.blog-list-item:last-child { border-bottom: none; }
+.post-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  background: hsl(0, 0%, 100%);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
 
-.blog-list-item:nth-child(even) { flex-direction: row-reverse; }
+.post-card:hover {
+  border-color: var(--dark-accent);
+  transform: translateY(-2px);
+}
 
-.item-image { flex: 0 0 42%; }
-
-.item-image img {
+.card-image img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   display: block;
 }
 
-.item-text { flex: 1; }
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.card-title { margin: 0 0 0.75rem; font-size: 1.25rem; }
+
+.card-excerpt {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  flex: 1;
+}
 
 .item-meta {
   font-size: 0.85rem;
@@ -119,9 +140,8 @@ a { color: var(--text); }
 
 .item-title a:hover { opacity: 0.6; }
 
-.item-excerpt { margin: 0 0 1.25rem; color: var(--text); }
-
 .read-more {
+  align-self: flex-start;
   font-size: 0.9rem;
   text-decoration: none;
   border-bottom: 1px solid var(--text);
@@ -164,6 +184,32 @@ a { color: var(--text); }
 .post-tags a:hover { border-color: var(--text); }
 
 .list-title { font-size: 1.6rem; margin: 1rem 0 0; }
+
+/* Previous / next article navigation */
+.post-nav {
+  max-width: var(--text-width);
+  margin: 3rem auto 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--accent);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.post-nav-prev, .post-nav-next { display: flex; flex-direction: column; gap: 0.35rem; max-width: 45%; }
+
+.post-nav-next { text-align: right; margin-left: auto; }
+
+.post-nav-label { font-size: 0.8rem; color: var(--muted); }
+
+.post-nav a {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.post-nav a:hover { opacity: 0.6; }
 
 /* Footer */
 .site-footer {

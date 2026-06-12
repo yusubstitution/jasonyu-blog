@@ -1,21 +1,21 @@
 {{ define "main" }}
-<div class="blog-list">
+<div class="post-grid">
   {{ range where site.RegularPages "Section" "blog" }}
-  <article class="blog-list-item">
-    {{ $img := "" }}
-    {{ range (findRE `<img [^>]*src="([^"]+)"` .Content 1) }}
-      {{ $img = replaceRE `<img [^>]*src="([^"]+)".*` "$1" . }}
-    {{ end }}
+  {{ $img := "" }}
+  {{ range (findRE `<img [^>]*src="([^"]+)"` .Content 1) }}
+    {{ $img = replaceRE `<img [^>]*src="([^"]+)".*` "$1" . }}
+  {{ end }}
+  <a class="post-card" href="{{ .RelPermalink }}">
     {{ with $img }}
-    <a class="item-image" href="{{ $.RelPermalink }}"><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></a>
+    <div class="card-image"><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></div>
     {{ end }}
-    <div class="item-text">
-      <div class="item-meta">{{ site.Title }} <span class="meta-delimiter">•</span> {{ .Date.Format "1/2/06" }}</div>
-      <h2 class="item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      <p class="item-excerpt">{{ .Summary | plainify | safeHTML }}</p>
-      <a class="read-more" href="{{ .RelPermalink }}">Read More →</a>
+    <div class="card-body">
+      <div class="item-meta">{{ .Date.Format "January 2, 2006" }}</div>
+      <h2 class="card-title">{{ .Title }}</h2>
+      <p class="card-excerpt">{{ .Summary | plainify | truncate 160 }}</p>
+      <span class="read-more">Read More →</span>
     </div>
-  </article>
+  </a>
   {{ end }}
 </div>
 {{ end }}
