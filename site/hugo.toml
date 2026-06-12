@@ -1,6 +1,7 @@
 baseURL = "https://www.jasonyu-explorations.com/"
 languageCode = "en-US"
 title = "Jason Yu"
+canonifyURLs = true
 
 # Homepage excerpt length (words)
 summaryLength = 70
